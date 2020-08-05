@@ -1,14 +1,20 @@
 import React, { Component } from "react";
 
-class TableResults extends Component {
+class TableHeader extends Component {
 
   render() {
     return (
-      <div>
-
-      </div>
+      <thead>
+        <tr>
+          <th scope="col">Image</th>
+          <th scope="col">Name</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Email</th>
+          <th scope="col">DOB</th>
+        </tr>
+      </thead>
     );
   }
 }
 
-export default TableResults;
+export default TableHeader;

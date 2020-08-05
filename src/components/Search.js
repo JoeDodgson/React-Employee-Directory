@@ -4,8 +4,14 @@ class Search extends Component {
 
   render() {
     return (
-      <div>
-
+      <div style={{"background-color": "#e9ecef", height: "100px", "text-align": "center"}}>
+        <form style={{"padding-top": "30px"}}>
+          <input
+            name="filter"
+            type="text"
+            placeholder="Search"
+          />
+        </form>
       </div>
     );
   }

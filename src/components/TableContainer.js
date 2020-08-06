@@ -183,6 +183,7 @@ class TableContainer extends Component {
         <tbody>
           <TableResults
             data={this.state.data}
+            search={this.props.search}
           />
         </tbody>
       </table>

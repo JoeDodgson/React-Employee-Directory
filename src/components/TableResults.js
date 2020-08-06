@@ -1,9 +1,13 @@
 import React from "react";
 
 export default function TableResults(props) {
+  const { data, search } = props;
+  const filteredData = data.filter(user => {
+    return user.name.toLowerCase().includes(search) || user.phone.includes(search) || user.email.toLowerCase().includes(search) || user.birthDate.includes(search)
+  });
   return (
     <>
-      {props.data.map(user => 
+      {filteredData.map(user => 
         <tr key={user.id} style={{verticalAlign: "middle"}}>
           <>
           <td className ="align-middle">

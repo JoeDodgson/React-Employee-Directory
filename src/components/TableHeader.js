@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 class TableHeader extends Component {
-  iconsStyle = {height: "20px", width: "20px", marginLeft: "20px", padding: "0"}
+  buttonStyle = {height: "20px", width: "20px", marginLeft: "20px", padding: "0", border: "none", backgroundColor: "unset"}
   headerData = [{
       key: "name",
       title: "Name",
@@ -32,7 +32,9 @@ class TableHeader extends Component {
           </th>
           {this.headerData.map(heading => 
             <th scope="col">{heading.title}
-              <i className="fas fa-sort" style={this.iconsStyle}></i>
+              <button name={heading.key} onClick={this.props.changeSort} style={this.buttonStyle}>
+                <i className="fas fa-sort"></i>
+              </button>
             </th>
           )}
         </tr>
